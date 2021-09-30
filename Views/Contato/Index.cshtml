@@ -1,0 +1,213 @@
+﻿<!doctype html>
+<html class="no-js" lang="pt-br">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Metalizza Metalúrgica | Bem Vindos</title>
+    <link rel="stylesheet" href="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
+
+</head>
+<body>
+
+    <header>
+
+
+
+        <!---->
+        <div class="top-bar">
+            <div class="top-bar-left">
+                <ul class="menu">
+                    <li> @Html.ActionLink("Pagina Inicial", "Index", "Home")</li>
+                    <li>@Html.ActionLink("Soluções", "Index", "Solucoes")</li>
+                    <li> @Html.ActionLink("Produtos", "Index", "Produto")</li>
+                    <li>@Html.ActionLink("Contato", "Index", "Contato")</a></li>
+                    <li>@Html.ActionLink("Sobre", "Index", "Sobre")</li>
+                    <li>@Html.ActionLink("Parceiros", "Index", "Cliente")</li>
+
+
+                </ul>
+            </div>
+            <div class="top-bar-center">
+                <ul class="menu">
+                    <img src="~/Models/Imagens/Metalizza/Metalizza lgo.png" />
+                </ul>
+            </div>
+
+        </div>
+
+
+
+
+    </header>
+
+    <footer>
+
+        <div class="row small-up-1 medium-up-2 large-up-3">
+            <div class="column">
+                <div class="callout">
+                    <p><h4><img src="~/Models/Imagens/Icon/Contato.png" /> Lista de Contatos</h4></p>
+                    <p>
+                        <img src="~/Models/Imagens/Icon/Vendas.png" /> <b>Vendas</b>
+                    </p>
+                    <p>
+                        Fone: +55 (11) 2535.8877
+                        Fax: +55 (11) 2535.8883
+                    </p>
+                    <p>
+                        <img src="~/Models/Imagens/Icon/SAC.png" /><b>
+                            SAC
+                        </b>
+                    </p>
+                    <p>
+                        Fone: + 55 (11) 2535.8877
+
+                    </p>
+                    <p>
+                        <img src="~/Models/Imagens/Icon/Email.png" /> <b>E-mail</b>
+                    </p>
+                    <p>
+                        sac@Metalizza.com.br
+                    </p>
+
+                </div>
+            </div>
+
+
+            <div class="medium-5 large-3 columns">
+                <div class="callout secondary" style="width:400px">
+                    <form>
+                        <div class="row" style="width: 350px">
+
+                            <div id="after_submit"></div>
+                            <form id="contact_form" action="#" method="POST" enctype="multipart/form-data">
+                                <div class="row">
+                                    <label class="required" for="name">Nome:</label><br />
+                                    <input id="name" class="input" name="name" type="text" value="" size="30" /><br />
+                                    <span id="name_validation" class="error_message"></span>
+                                </div>
+                                <div class="row">
+                                    <label class="required" for="email">E-mail:</label><br />
+                                    <input id="email" class="input" name="email" type="text" value="" size="30" /><br />
+                                    <span id="email_validation" class="error_message"></span>
+                                </div>
+                                <div class="row">
+                                    <label class="required" for="message">Menssagem:</label><br />
+                                    <textarea id="message" class="input" name="message" rows="7" cols="30"></textarea><br />
+                                    <span id="message_validation" class="error_message"></span>
+                                </div>
+
+                                <button type="submit" class="button" style="width: 300px">Enviar E-mail </button>
+                            </form>
+                        </div>
+                </div>
+                </form>
+            </div>
+        </div>
+
+        </div>
+
+
+
+
+    </footer>
+
+    <br>
+    <!--localizaçao-->
+    <div class="row column">
+        <p class="lead">UNIDADES</p>
+        <div class="media-object-section">
+            <h6>
+                <img src="~/Models/Imagens/Icon/localizacao.png" />
+                AV. EMÍLIO ARROYO HERNANDES, 1.950
+                PARQUE INDUSTRIAL I
+                VOTUPORANGA - SP
+            </h6>
+
+        </div>
+        <div class="media-object-section">
+            <h6>
+                <img src="~/Models/Imagens/Icon/localizacao.png" />
+                ROD. WASHINGTON LUIZ KM 442,50
+                JARDIM DO CEDRO
+                SÃO JOSÉ DO RIO PRETO - SP
+            </h6>
+
+        </div>
+
+        <div class="media-object-section">
+            <h6>
+                <img src="~/Models/Imagens/Icon/localizacao.png" />
+                AV. LUIZ BOITEUX PIAZZA, Nº 1.302
+                LOTE 87/89 – CACHOEIRA DO BOM JESUS
+                FLORIANÓPOLIS – SC
+            </h6>
+
+
+        </div>
+
+        <div class="media-object-section">
+            <h6>
+                <img src="~/Models/Imagens/Icon/localizacao.png" />
+                CIDADE UNIVERSITÁRIA | AV. NASSER MARÃO, Nº 3.069
+                PQ. INDUSTRIAL I - CEP 15.503-005
+                VOTUPORANGA - SP
+            </h6>
+
+
+        </div>
+    </div>
+
+
+    <!-- / sub rodapé-->
+
+    <div class="top-bar">
+        <div class="large-4 columns">
+            <h5>Soluções</h5>
+            <span class="secondary label">Tiras a quente</span>
+            <span class="secondary label">Laminados a frio</span>
+            <span class="secondary label">Eletrogalvanizados</span>
+            <span class="secondary label">Galvanizados por imersão a quente</span>
+            <span class="secondary label">Chapas Grossas</span>
+            <span class="secondary label">Galvanizados por Imersão a Quente (HDG)</span>
+            <span class="secondary label">Eletrogalvanizados</span>
+            <span class="secondary label">Tratamentos Térmicos e de Superfície</span>
+            <span class="secondary label">Soldagem e CQI15</span>
+            <span class="secondary label">Fundição</span>
+            <span class="secondary label">Transformação Mecânica</span>
+        </div>
+        <div class="large-8 left-align">
+            <h5>Metalizza Metalúrgica</h5>
+            <p>
+                <br>A política adotada é voltada pela transparência, equidade e máximo respeito, norteando a busca pelo desenvolvimento sustentável e inovação que dão suporte à serenidade dos negócios.</br>
+            </p>
+        </div>
+
+        <div class="medium-6 columns">
+            <ul class="menu left-align">
+                <li class="menu-text">Copyright Metalizza S.A </li>
+            </ul>
+        </div>
+
+        <div class="medium-6 columns">
+            <ul class="menu">
+
+                <li> @Html.ActionLink("Pagina Inicial", "Index", "Home")</li>
+                <li>@Html.ActionLink("Soluções", "Index", "Solucoes")</li>
+                <li> @Html.ActionLink("Produtos", "Index", "Produto")</li>
+                <li>@Html.ActionLink("Contato", "Index", "Contato")</a></li>
+                <li>@Html.ActionLink("Sobre", "Index", "Sobre")</li>
+                <li>@Html.ActionLink("Parceiros", "Index", "Cliente")</li>
+
+            </ul>
+        </div>
+
+    </div>
+
+
+
+
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
+    <script>$(document).foundation();</script>
+</body>
+</html>

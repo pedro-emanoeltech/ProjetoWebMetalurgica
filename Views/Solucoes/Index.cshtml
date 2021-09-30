@@ -1,0 +1,207 @@
+﻿<!doctype html>
+@model IEnumerable<Metalurgica.Models.Mapeamento.Material>
+
+@{ ViewBag.Title = "index";
+    Layout = "~/Views/Shared/_Foundation.cshtml"; }
+
+<html class="no-js" lang="pt-br">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Metalizza Metalúrgica | Bem Vindos</title>
+    <link rel="stylesheet" href="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
+
+</head>
+
+<body>
+
+    <header>
+
+
+
+        <!---->
+        <div class="top-bar">
+            <div class="top-bar-left">
+                <ul class="menu">
+                    <li> @Html.ActionLink("Pagina Inicial", "Index", "Home")</li>
+                    <li>@Html.ActionLink("Soluções", "Index", "Solucoes")</li>
+                    <li> @Html.ActionLink("Produtos", "Index", "Produto")</li>
+                    <li>@Html.ActionLink("Contato", "Index", "Contato")</a></li>
+                    <li>@Html.ActionLink("Sobre", "Index", "Sobre")</li>
+                    <li>@Html.ActionLink("Parceiros", "Index", "Cliente")</li>
+
+                </ul>
+            </div>
+            <div class="top-bar-center">
+                <ul class="menu">
+
+                    <img src="~/Models/Imagens/Metalizza/Metalizza lgo.png" />
+
+                </ul>
+            </div>
+        </div>
+
+    </header>
+    <div class="row column">
+        <h4 style="margin: 0;" class="text-center">Materiais Trabalhados</h4>
+    </div>
+
+    <br>
+
+    <hr>
+
+    <div class="row small-up-3 medium-up-4 large-4">
+
+
+        @foreach (var item in Model)
+        {
+<tr>
+    <div class="column">
+
+
+    <td>
+
+
+        <img src="@Html.DisplayFor(modelItem => item.Imagem)" />
+
+        <figcaption>
+
+            <p><b>Descrição: </b> @Html.DisplayFor(modelItem =>item.DescricaoMaterial)</p>
+
+            <br />
+            <br></br>
+
+        </figcaption>
+    </td>
+</div>
+
+</tr>}
+        </div>
+
+
+
+
+        <div class="row column">
+            <h4 style="margin: 0;" class="text-center">Serviços</h4>
+        </div>
+        <br>
+
+        <hr>
+
+
+
+        <div class="row">
+            <div class="large-8 columns" style="border-right: 1px solid #E3E5E8;">
+
+                <article>
+
+                    <div class="row">
+                        <div class="large-6 columns">
+                            <p><img src="https://www.lealfer.com.br/images/ProdutosSliders/LaminadosFrio2.jpg" alt="Laminados a frio"></p>
+
+
+                        </div>
+                        <div class="large-6 columns">
+                            <h5><a href="~/Contato/Index">Laminados a frio</a></h5>
+                            <p>Os produtos de aço laminados a frio (LF) são gerados a partir da redução de espessura, a frio, dos aços laminados a quente. São aplicados nos segmentos: automotivo, eletrodomésticos (linha branca), construção civil (ferragens e tubos), componentes mecânicos e outros onde haja a necessidade de estampagem simples ou conformação extra profunda (alto grau de deformação), aliada às exigências de qualidade superficial.</p>
+                        </div>
+                    </div>
+
+                    <hr>
+
+                    <div class="row">
+                        <div class="large-6 columns">
+
+                            <p><img src="https://www.revistadoaco.com.br/wp-content/uploads/2018/04/a-eficiencia-da-galvanizacao-a-fogo-no-aumento-da-vida-util-dos-tubos.jpg" alt="Galvanizados por imersão a quente"></p>
+                        </div>
+                        <div class="large-6 columns">
+                            <h5><a href="~/Contato/Index">Galvanizados por imersão a quente</a></h5>
+
+                            <p>Ressaltamos que para cada tipo de galvanização tem suas aplicações específicas, porém quando o objetivo é obter-se a maior vida útil possível, considerando a categoria de corrosividade do ambiente em que a peça está inserida, recomenda-se o processo da galvanização por imersão a quente geral, pela maior espessura de zinco obtida”.</p>
+                        </div>
+                    </div>
+
+                    <hr>
+
+                    <div class="row">
+                        <div class="large-6 columns">
+
+                            <p><img src="https://novovarejo.com.br/wp-content/uploads/2019/09/shutterstock_1207978306.jpg" alt="Fundição image"></p>
+                        </div>
+                        <div class="large-6 columns">
+                            <h5><a href="~/Contato/Index">Fundição</a></h5>
+
+                            <p>Para a Metalizza a fundição é aquela que oferece ao mercado peças técnicas fabricadas sob um rígido controle de qualidade, capaz de assegurar conformidade com as normas aplicáveis em todas as etapas de fabricação. Para isso, a empresa de fundição deve contar com parque fabril moderno, equipe técnica especializada e laboratório de análise de materiais.</p>
+                        </div>
+                    </div>
+
+                    <hr>
+
+                    <div class="row">
+                        <div class="large-6 columns">
+
+                            <p><img src="https://www.usiminas.com/wp-content/uploads/2019/10/destaque-eletrogalvanizados.jpg" alt="Eletrogalvanizados"></p>
+                        </div>
+                        <div class="large-6 columns">
+                            <h5><a href="~/Contato/Index">Eletrogalvanizados</a></h5>
+
+                            <p>Resistência à corrosão Aços revestidos com uma camada uniforme e aderente de cristais de zinco.Flexibilidade A galvanização eletrolítica proporciona produtos com revestimento em uma ou nas duas faces.</p>
+                        </div>
+                    </div>
+
+                    <hr>
+
+                    <div class="row">
+                        <div class="large-6 columns">
+
+                            <p><img src="https://www.mecanicaindustrial.com.br/wp-content/uploads/2017/07/endurecimento.jpg" alt="Tratamentos Térmicos e de Superfície"></p>
+                        </div>
+                        <div class="large-6 columns">
+                            <h5><a href="~/Contato/Index">Tratamentos Térmicos e de Superfície</a></h5>
+
+                            <p>O tratamento térmico é o aquecimento e o resfriamento de metais para alterar suas propriedades físicas e mecânicas, sem permitir que ela mude de forma. O tratamento térmico é um método para fortalecer materiais, mas também pode ser usado para alterar algumas propriedades mecânicas, como melhorar a forma, usinagem, etc. A aplicação mais comum é metalúrgica, mas o tratamento térmico também pode ser usado na fabricação de vidro, alumínio, aço e muitos outros materiais.</p>
+                        </div>
+                    </div>
+
+                </article>
+
+            </div>
+        </div>
+
+        <div class="top-bar">
+
+            <div class="large-8 left-align">
+                <h5>Metalizza Metalúrgica</h5>
+                <p>
+                    <br>A política adotada é voltada pela transparência, equidade e máximo respeito, norteando a busca pelo desenvolvimento sustentável e inovação que dão suporte à serenidade dos negócios.</br>
+                </p>
+            </div>
+
+            <div class="medium-6 columns">
+                <ul class="menu left-align">
+                    <li class="menu-text">Copyright Metalizza S.A </li>
+                </ul>
+            </div>
+
+            <div class="medium-6 columns">
+                <ul class="menu">
+
+                    <li> @Html.ActionLink("Pagina Inicial", "Index", "Home")</li>
+                    <li>@Html.ActionLink("Soluções", "Index", "Solucoes")</li>
+                    <li> @Html.ActionLink("Produtos", "Index", "Produto")</li>
+                    <li>@Html.ActionLink("Contato", "Index", "Contato")</a></li>
+                    <li>@Html.ActionLink("Sobre", "Index", "Sobre")</li>
+                    <li>@Html.ActionLink("Parceiros", "Index", "Cliente")</li>
+
+                </ul>
+            </div>
+
+        </div>
+
+        <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+        <script src="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
+        <script>$(document).foundation();</script>
+
+
+    </body>
+</html>

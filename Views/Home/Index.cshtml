@@ -1,0 +1,293 @@
+﻿<!doctype html>
+@model IEnumerable<Metalurgica.Models.Mapeamento.Catalogo>
+@{ string url = Url.Action("", "Travel"); }
+<html class="no-js" lang="pt-br">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Metalizza Metalúrgica | Bem Vindos</title>
+    <link rel="stylesheet" href="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
+
+</head>
+<body>
+
+    <header>
+
+
+
+        <!---->
+        <div class="top-bar">
+            <div class="top-bar-left">
+                <ul class="menu">
+                    <li> @Html.ActionLink("Pagina Inicial", "Index", "Home")</li>
+                    <li>@Html.ActionLink("Soluções", "Index", "Solucoes")</li>
+                    <li> @Html.ActionLink("Produtos", "Index", "Produto")</li>
+                    <li>@Html.ActionLink("Contato", "Index", "Contato")</a></li>
+                    <li>@Html.ActionLink("Sobre", "Index", "Sobre")</li>
+                    <li>@Html.ActionLink("Parceiros", "Index", "Cliente")</li>
+
+                </ul>
+            </div>
+            <div class="top-bar-center">
+                <ul class="menu">
+
+                    <img src="~/Models/Imagens/Metalizza/Metalizza lgo.png" />
+
+                </ul>
+            </div>
+        </div>
+
+
+
+
+        <div class="row">
+
+            <div class="medium columns">
+
+                <img src="~/Models/Imagens/Metalizza/banner metalizza.png" />
+
+            </div>
+        </div>
+        <!-- / logo-->
+
+
+
+    </header>
+
+    <br>
+
+    <hr>
+
+    <!-- / soluçoes-->
+    <div class="row column">
+        <h4 style="margin: 0;" class="text-center">Produtos</h4>
+    </div>
+
+
+    <div class="row small-up-3 medium-up-4 large-4">
+
+        @foreach (var item in Model)
+        {
+<tr>
+    <div class="column">
+
+
+    <td>
+
+
+        <img src="@Html.DisplayFor(modelItem => item.Imagem)" />
+
+        <figcaption>
+
+            <p><b>Descrição: </b> @Html.DisplayFor(modelItem => item.Nome)</p>
+            <p> <b>Setor:</b> @Html.DisplayFor(modelItem => item.Setor)</p>
+            <p> <b>Material:</b> @Html.DisplayFor(modelItem => item.Material.DescricaoMaterial)</p>
+
+            <br></br>
+
+        </figcaption>
+    </td>
+</div>
+
+</tr>}
+        </div>
+
+
+
+        <div class="row column">
+            <h4 style="margin: 0;" class="text-center">Nossos Clientes</h4>
+        </div>
+
+        <hr>
+        <!-- / clientes-->
+        <div class="row">
+            <div class="large-8 columns" style="border-right: 1px solid #E3E5E8;">
+
+                <article>
+
+                    <div class="row">
+                        <div class="large-6 columns">
+                            <p><img src="~/Models/Imagens/Clientes/automotiva.jpg" alt="Automotiva"></p>
+
+
+                        </div>
+                        <div class="large-6 columns">
+                            <h5><a href="~/Contato/Index">Automotivo</a></h5>
+                            <p>Seja para montadoras ou para o setor de autopeças e estamparia, a Metalizza busca desenvolver as soluções ideais e que se adequem às diferentes necessidades que o mercado exige. CONHEÇA NOSSAS SOLUÇÕES PARA MONTADORAS, AUTOPEÇAS E ESTAMPARIAS:</p>
+                        </div>
+                    </div>
+
+                    <hr>
+
+                    <div class="row">
+                        <div class="large-6 columns">
+
+                            <p><img src="~/Models/Imagens/Clientes/Construcao civil.jpg" alt="Construcao Civil"></p>
+                        </div>
+                        <div class="large-6 columns">
+                            <h5><a href="~/Contato/Index">Construção Civil</a></h5>
+
+                            <p>O aço da Metalizza está por todos os lados: do carrinho de mão às estruturas para pontes, edifícios, estádios, painéis solares, torres eólicas e muito mais. CONHEÇA NOSSAS SOLUÇÕES PARA A CONSTRUÇÃO CIVIL E INFRASTRUTURA: A Metalizza foi a primeira do país a fornecer aço para o programa habitacional “Minha Casa Minha Vida”.</p>
+                        </div>
+                    </div>
+
+                    <hr>
+
+                    <div class="row">
+                        <div class="large-6 columns">
+
+                            <p><img src="~/Models/Imagens/Clientes/Industria-moveleira.jpg" alt="article preview image"></p>
+                        </div>
+                        <div class="large-6 columns">
+                            <h5><a href="~/Contato/Index">Industria Moveleira</a></h5>
+
+                            <p>A Metalizza atua na produção de peças metálicas para o setor moveleiro e tem a tecnologia necessária para criar de forma eficiente, peças estampadas de pequeno e médio porte.Com estrutura e capacidade para atender as maiores demandas de produção, a empresa possui também os mais modernos equipamentos do mercado para suprir as diferentes necessidades de cada cliente.</p>
+                        </div>
+                    </div>
+
+                    <hr>
+
+                </article>
+
+            </div>
+            <!-- / logo rede social-->
+
+            <div class="large-4 columns">
+
+                <aside>
+
+                    <div class="row small-up-3">
+
+                        <div class="column text-center">
+                            <h6>56.000</h6>
+                            <p><small> unidades produzidas na fábrica </small></p>
+                            <br>
+                        </div>
+
+                        <div class="column text-center">
+
+                            <h6>1500</h6>
+                            <p><small>Clientes atendidos</small></p>
+                            <br>
+                        </div>
+
+
+                    </div>
+
+                    <br>
+                    <!-- / historia da empresa-->
+                    <div class="row column">
+                        <p class="lead">Nossa Historia</p>
+                        <p><img src="~/Models/Imagens/Metalizza/METAL.jpg" alt="Historia"></p>
+                        <figcaption> Já parou pra pensar na presença do aço em seu dia a dia? Seja no carro, no prédio, no navio, na geladeira, em painéis solares, equipamentos agrícolas, máquinas industriais, torres eólicas ou até mesmo naquela grandiosa plataforma de petróleo, em tudo isso tem o aço da Metalizza.   </figcaption>
+                    </div>
+
+
+                    <br>
+                    <!--localizaçao-->
+                    <div class="row column">
+                        <p class="lead">UNIDADES</p>
+
+
+                        <div class="media-object-section">
+
+                            <h6>
+                                <img src="~/Models/Imagens/Icon/localizacao.png" />
+                                AV. EMÍLIO ARROYO HERNANDES, 1.950
+                                PARQUE INDUSTRIAL I
+                                VOTUPORANGA-SP - BRASIL
+                            </h6>
+
+                        </div>
+                    </div>
+
+                    <div class="media-object">
+                        <div class="media-object-section">
+                            <h6>
+                                <img src="~/Models/Imagens/Icon/localizacao.png" />
+                                ROD. WASHINGTON LUIZ KM 442,50
+                                JARDIM DO CEDRO
+                                SÃO JOSÉ DO RIO PRETO-SP - BRASIL
+                            </h6>
+
+                        </div>
+                    </div>
+
+                    <div class="media-object">
+
+                        <div class="media-object-section">
+                            <h6>
+                                <img src="~/Models/Imagens/Icon/localizacao.png" />
+                                AV. LUIZ BOITEUX PIAZZA, Nº 1.302
+                                LOTE 87/89 – CACHOEIRA DO BOM JESUS
+                                FLORIANÓPOLIS – SC
+                            </h6>
+
+
+                        </div>
+                    </div>
+
+                </aside>
+
+            </div>
+
+        </div>
+
+
+
+
+
+        <!-- / sub rodapé-->
+
+        <div class="top-bar">
+            <div class="large-4 columns">
+                <h5>Soluções</h5>
+                <span class="secondary label">Tiras a quente</span>
+                <span class="secondary label">Laminados a frio</span>
+                <span class="secondary label">Eletrogalvanizados</span>
+                <span class="secondary label">Galvanizados por imersão a quente</span>
+                <span class="secondary label">Chapas Grossas</span>
+                <span class="secondary label">Galvanizados por Imersão a Quente (HDG)</span>
+                <span class="secondary label">Eletrogalvanizados</span>
+                <span class="secondary label">Tratamentos Térmicos e de Superfície</span>
+                <span class="secondary label">Soldagem e CQI15</span>
+                <span class="secondary label">Fundição</span>
+                <span class="secondary label">Transformação Mecânica</span>
+            </div>
+            <div class="large-8 left-align">
+                <h5>Metalizza Metalúrgica</h5>
+                <p>
+                    <br>A política adotada é voltada pela transparência, equidade e máximo respeito, norteando a busca pelo desenvolvimento sustentável e inovação que dão suporte à serenidade dos negócios.</br>
+                </p>
+            </div>
+
+            <div class="medium-6 columns">
+                <ul class="menu left-align">
+                    <li class="menu-text">Copyright Metalizza S.A </li>
+                </ul>
+            </div>
+
+            <div class="medium-6 columns">
+                <ul class="menu">
+
+                    <li> @Html.ActionLink("Pagina Inicial", "Index", "Home")</li>
+                    <li>@Html.ActionLink("Soluções", "Index", "Solucoes")</li>
+                    <li> @Html.ActionLink("Produtos", "Index", "Produto")</li>
+                    <li>@Html.ActionLink("Contato", "Index", "Contato")</a></li>
+                    <li>@Html.ActionLink("Sobre", "Index", "Sobre")</li>
+                    <li>@Html.ActionLink("Parceiros", "Index", "Cliente")</li>
+
+                </ul>
+            </div>
+
+        </div>
+
+
+
+        <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+        <script src="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
+        <script>
+            $(document).foundation();
+        </script>
+    </body>
+</html>

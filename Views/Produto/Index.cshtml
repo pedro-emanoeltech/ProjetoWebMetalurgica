@@ -1,0 +1,186 @@
+﻿<!doctype html>
+@model IEnumerable<Metalurgica.Models.Mapeamento.Catalogo>
+@{ string url = Url.Action("", "Travel"); }
+<html class="no-js" lang="pt-br">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Metalizza Metalúrgica | Catalogo</title>
+    <link rel="stylesheet" href="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
+
+</head>
+
+<body>
+
+    <header>
+
+
+
+        <!---->
+        <div class="top-bar">
+            <div class="top-bar-left">
+                <ul class="menu">
+                    <li> @Html.ActionLink("Pagina Inicial", "Index", "Home")</li>
+                    <li>@Html.ActionLink("Soluções", "Index", "Solucoes")</li>
+                    <li> @Html.ActionLink("Produtos", "Index", "Produto")</li>
+                    <li>@Html.ActionLink("Contato", "Index", "Contato")</a></li>
+                    <li>@Html.ActionLink("Sobre", "Index", "Sobre")</li>
+                    <li>@Html.ActionLink("Parceiros", "Index", "Cliente")</li>
+
+
+                </ul>
+            </div>
+            <div class="top-bar-center">
+                <ul class="menu">
+
+                    <img src="~/Models/Imagens/Metalizza/Metalizza lgo.png" />
+
+                </ul>
+            </div>
+        </div>
+
+
+        <div class="row column">
+            <h4 style="margin: 0;" class="text-center">Catálogo</h4>
+
+
+        </div>
+
+
+        <div class="title-bar" data-responsive-toggle="main-menu" data-hide-for="medium">
+            <button class="menu-icon" type="button" data-toggle></button>
+            <div class="title-bar-title">Menu</div>
+        </div>
+
+
+        <div class="top-bar" id="main-menu">
+            <ul class="menu vertical medium-horizontal expanded medium-text-center" data-responsive-menu="drilldown medium-dropdown">
+                <li class="has-submenu">
+
+                    <a href="#">Tecnologico</a>
+                    <ul class="submenu menu vertical" data-submenu>
+                        <li><a href="#">Refrigeração</a></li>
+                        <li><a href="#">Construção Civil</a></li>
+                        <li><a href="#"> Automotivo</a></li>
+                    </ul>
+                </li>
+                <li class="has-submenu">
+                    <a href="#">Metal</a>
+                    <ul class="submenu menu vertical" data-submenu>
+                        <li><a href="#">Arame de Construção</a></li>
+                        <li><a href="#">Barra Forjada Chata</a></li>
+                        <li><a href="#">Barra Laminada Redonda</a></li>
+                    </ul>
+                </li>
+                <li class="has-submenu">
+                    <a href="#">Energia</a>
+                    <ul class="submenu menu vertical" data-submenu>
+                        <li><a href="#">Cantoneira de Aço</a></li>
+                        <li><a href="#">Chapa Grossa de Aço </a></li>
+                        <li><a href="#">Bobinas Laminadas a Quente</a></li>
+                    </ul>
+                </li>
+                <a href="~/Contato/Index" class="button">Solicitar Orçamento</a>
+                
+            </ul>
+        </div>
+    </header>
+
+
+    <div class="row small-up-3 medium-up-4 large-4">
+
+
+        @foreach (var item in Model)
+        {
+<tr>
+    <div class="column">
+
+
+    <td>
+
+        
+        <img src="@Html.DisplayFor(modelItem => item.Imagem)" />
+        
+        <figcaption>
+
+            <p><b>Descrição: </b> @Html.DisplayFor(modelItem => item.Nome)</p>
+            <p> <b>Setor:</b> @Html.DisplayFor(modelItem => item.Setor)</p>
+            <p> <b>Material:</b> @Html.DisplayFor(modelItem => item.Material.DescricaoMaterial)</p>
+
+            <a href="/Produto/Details/@item.ID">
+                <i>
+                    <img src="~/Models/Imagens/Icon/ver-detalhes.png" />
+                </i>
+            </a>
+
+            <a href="/Produto/Edit/@item.ID">
+                <i>
+                    <img src="~/Models/Imagens/Icon/editar.png" />
+                </i>
+            </a>
+
+            <a href="/Produto/Delete/@item.ID" onclick="return confirm('Deseja Realmente Excluir o Item ?');">
+                <i>
+                    <img src="~/Models/Imagens/Icon/excluir.png" />
+                </i>
+            </a>
+            <br />
+            <br></br>
+
+        </figcaption>
+    </td>
+</div>
+
+            </tr>}
+        </div>
+
+        <!-- / sub rodapé-->
+
+        <div class="top-bar">
+            <div class="large-4 columns">
+                <h5>Soluções</h5>
+                <span class="secondary label">Tiras a quente</span>
+                <span class="secondary label">Laminados a frio</span>
+                <span class="secondary label">Eletrogalvanizados</span>
+                <span class="secondary label">Galvanizados por imersão a quente</span>
+                <span class="secondary label">Chapas Grossas</span>
+                <span class="secondary label">Galvanizados por Imersão a Quente (HDG)</span>
+                <span class="secondary label">Eletrogalvanizados</span>
+                <span class="secondary label">Tratamentos Térmicos e de Superfície</span>
+                <span class="secondary label">Soldagem e CQI15</span>
+                <span class="secondary label">Fundição</span>
+                <span class="secondary label">Transformação Mecânica</span>
+            </div>
+            <div class="large-8 left-align">
+                <h5>Metalizza Metalúrgica</h5>
+                <p>
+                    <br>A política adotada é voltada pela transparência, equidade e máximo respeito, norteando a busca pelo desenvolvimento sustentável e inovação que dão suporte à serenidade dos negócios.</br>
+                </p>
+            </div>
+
+            <div class="medium-6 columns">
+                <ul class="menu left-align">
+                    <li class="menu-text">Copyright Metalizza S.A </li>
+                </ul>
+            </div>
+
+            <div class="medium-6 columns">
+                <ul class="menu">
+
+                    <li> @Html.ActionLink("Pagina Inicial", "Index", "Home")</li>
+                    <li>@Html.ActionLink("Soluções", "Index", "Solucoes")</li>
+                    <li> @Html.ActionLink("Produtos", "Index", "Produto")</li>
+                    <li>@Html.ActionLink("Contato", "Index", "Contato")</a></li>
+                    <li>@Html.ActionLink("Sobre", "Index", "Sobre")</li>
+                    <li>@Html.ActionLink("Parceiros", "Index", "Cliente")</li>
+
+                </ul>
+            </div>
+
+        </div>
+
+        <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+        <script src="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
+        <script>$(document).foundation();</script>
+    </body>
+</html>

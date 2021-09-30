@@ -1,0 +1,148 @@
+﻿@model Metalurgica.Models.Mapeamento.Catalogo
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_Foundation.cshtml";
+}
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Metalizza Metalúrgica | alteracao do Item </title>
+    <link rel="stylesheet" href="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
+
+</head>
+
+<body>
+
+    <header>
+
+
+
+        <!---->
+        <div class="top-bar">
+            <div class="top-bar-left">
+                <ul class="menu">
+                    <li> @Html.ActionLink("Pagina Inicial", "Index", "Home")</li>
+                    <li>@Html.ActionLink("Soluções", "Index", "Solucoes")</li>
+                    <li> @Html.ActionLink("Produtos", "Index", "Produto")</li>
+                    <li>@Html.ActionLink("Contato", "Index", "Contato")</a></li>
+                    <li>@Html.ActionLink("Sobre", "Index", "Sobre")</li>
+                    <li>@Html.ActionLink("Parceiros", "Index", "Cliente")</li>
+
+
+                </ul>
+            </div>
+            <div class="top-bar-center">
+                <ul class="menu">
+
+                    <img src="~/Models/Imagens/Metalizza/Metalizza lgo.png" />
+
+                </ul>
+            </div>
+        </div>
+
+
+        <div class="row column">
+            <h4 style="margin: 0;" class="text-center"> <b>Alterando Item: </b>@Html.DisplayFor(model => model.Nome)</h4>
+
+        </div>
+
+    </header>
+    <div class="row small-up-1 medium-up-2 large-up-3">
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-horizontal">
+                <h4>Catalogo</h4>
+                <hr />
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                @Html.HiddenFor(model => model.ID)
+
+                <div class="form-group">
+                    Nome:
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.Nome, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Nome, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    Setor:
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.Setor, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Setor, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    Endereço Imagem:
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.Imagem, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Imagem, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    Detalhes:
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.Detalhes, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Detalhes, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    Material:
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.IDMaterial, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.IDMaterial, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <input type="submit" value="Save" class="btn btn-default" />
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+    
+    <br></br>
+
+
+    <div class="top-bar">
+
+        <div class="large-8 left-align">
+            <h5>Metalizza Metalúrgica</h5>
+            <p>
+                <br>A política adotada é voltada pela transparência, equidade e máximo respeito, norteando a busca pelo desenvolvimento sustentável e inovação que dão suporte à serenidade dos negócios.</br>
+            </p>
+        </div>
+
+        <div class="medium-6 columns">
+            <ul class="menu left-align">
+                <li class="menu-text">Copyright Metalizza S.A </li>
+            </ul>
+        </div>
+
+        <div class="medium-6 columns">
+            <ul class="menu">
+
+                <li> @Html.ActionLink("Pagina Inicial", "Index", "Home")</li>
+                <li>@Html.ActionLink("Soluções", "Index", "Solucoes")</li>
+                <li> @Html.ActionLink("Produtos", "Index", "Produto")</li>
+                <li>@Html.ActionLink("Contato", "Index", "Contato")</a></li>
+                <li>@Html.ActionLink("Sobre", "Index", "Sobre")</li>
+                <li>@Html.ActionLink("Parceiros", "Index", "Cliente")</li>
+
+            </ul>
+        </div>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
+    <script>$(document).foundation();</script>
+
+</body>
